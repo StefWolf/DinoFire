@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>DesertoAlgoritmo</name>
+    <events>
+        <variable comment="tempo restante" constant="0" name="var_time" sid="481563201990873" static="0" type="number">60</variable>
+        <event-block sid="788323236810976">
+            <conditions>
+                <condition id="2" name="Key is down" sid="398948575391448" type="Keyboard">
+                    <param id="0" name="Key">39</param>
+                </condition>
+                <condition behavior="Platform" id="3" inverted="1" name="Is jumping" sid="242594821818986" type="Dino" />
+                <condition behavior="Platform" id="4" inverted="1" name="Is falling" sid="616798225749334" type="Dino" />
+                <condition id="-7" name="Compare instance variable" sid="708159748072492" type="Dino">
+                    <param id="0" name="Instance variable">vida</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="372885930925512" type="Dino">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="6" name="Set speed" sid="877442971734641" type="Dino">
+                    <param id="0" name="Speed">10</param>
+                </action>
+                <action id="4" name="Set animation" sid="470942879449105" type="Dino">
+                    <param id="0" name="Animation">&quot;Andando&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="109159213254651">
+            <conditions>
+                <condition id="2" name="Key is down" sid="421868626530207" type="Keyboard">
+                    <param id="0" name="Key">37</param>
+                </condition>
+                <condition behavior="Platform" id="3" inverted="1" name="Is jumping" sid="860071925294761" type="Dino" />
+                <condition behavior="Platform" id="4" inverted="1" name="Is falling" sid="242535621753335" type="Dino" />
+                <condition id="-7" name="Compare instance variable" sid="361358327166696" type="Dino">
+                    <param id="0" name="Instance variable">vida</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="114891483258695" type="Dino">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="6" name="Set speed" sid="827744005847020" type="Dino">
+                    <param id="0" name="Speed">10</param>
+                </action>
+                <action id="4" name="Set animation" sid="378859481197618" type="Dino">
+                    <param id="0" name="Animation">&quot;Andando&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="841870779338305">
+            <conditions>
+                <condition id="2" inverted="1" name="Key is down" sid="237363161752644" type="Keyboard">
+                    <param id="0" name="Key">39</param>
+                </condition>
+                <condition id="2" inverted="1" name="Key is down" sid="925547253680705" type="Keyboard">
+                    <param id="0" name="Key">37</param>
+                </condition>
+                <condition id="2" inverted="1" name="Key is down" sid="805550581564623" type="Keyboard">
+                    <param id="0" name="Key">32</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="6" name="Set speed" sid="117194323378884" type="Dino">
+                    <param id="0" name="Speed">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="497634523711518" type="Dino">
+                    <param id="0" name="Animation">&quot;Parado&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="887660290469343">
+            <conditions>
+                <condition behavior="Platform" id="3" name="Is jumping" sid="911984017938279" type="Dino" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="276819160130054" type="Dino">
+                    <param id="0" name="Animation">&quot;pulando&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="6" name="Set speed" sid="544825383040432" type="Dino">
+                    <param id="0" name="Speed">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="934469801290833">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="825517725692236" type="Dino">
+                    <param id="0" name="Object">TiledBackground16</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="782644726390564" type="Dino">
+                    <param id="0" name="Instance variable">vida</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="843289258526383" type="Dino">
+                    <param id="0" name="Animation">&quot;morte&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action behavior="Platform" id="11" name="Set enabled" sid="795913631258778" type="Dino">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-12" name="Subtract from" sid="466451331801981" type="Dino">
+                    <param id="0" name="Instance variable">vida</param>
+                    <param id="1" name="Value">5</param>
+                </action>
+                <action id="-5" name="Set width" sid="415043806129482" type="TiledBackground15">
+                    <param id="0" name="Width">Dino.vida*50</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="750166448601957">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="558025439191351" type="Dino">
+                    <param id="0" name="Instance variable">vida</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="11" name="Set enabled" sid="758206060635329" type="Dino">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="378520979662240" type="Dino">
+                    <param id="0" name="Animation">&quot;morte&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="675353083862277" type="System">
+                    <param id="0" name="Seconds">2.0</param>
+                </action>
+                <action id="-26" name="Restart layout" sid="418668875181099" type="System" />
+                <action id="-9" name="Set value" sid="927064847741385" type="System">
+                    <param id="0" name="Variable">var_time</param>
+                    <param id="1" name="Value">60</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="465815518627659">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="622720989971304" type="Dino">
+                    <param id="0" name="Object">Sprite43</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="440381748126660" type="System">
+                    <param id="0" name="Layout">&quot;Floresta&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="769801290656613">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="106862261169485" type="Mouse">
+                    <param id="0" name="Object">Sprite44</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="176189823118201" type="Sprite44">
+                    <param id="0" name="Animation">&quot;Click&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="975952130852477">
+            <conditions>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="742023729554168" type="Mouse">
+                    <param id="0" name="Object">Sprite44</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="533666533272933" type="Sprite44">
+                    <param id="0" name="Animation">&quot;NoClick&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="411595849102318">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="346169250563144" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="990849417846993" type="Text2">
+                    <param id="0" name="Text">var_time</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="781915847589886">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="845279792653310" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="120368607338734" type="System">
+                    <param id="0" name="Variable">var_time</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="489289009885535">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="245594042069633" type="System">
+                            <param id="0" name="Variable">var_time</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="312313960428200" type="Dino">
+                            <param id="0" name="Animation">&quot;morte&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="373870862910139" type="Dino">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-26" name="Restart layout" sid="219882490911221" type="System" />
+                        <action id="-9" name="Set value" sid="638147978162365" type="System">
+                            <param id="0" name="Variable">var_time</param>
+                            <param id="1" name="Value">60</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="396139900190431">
+            <conditions>
+                <condition id="5" name="Compare axis" sid="682804088238002" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Axis">0</param>
+                    <param id="2" name="Comparison">2</param>
+                    <param id="3" name="Value">0</param>
+                </condition>
+                <condition behavior="Platform" id="4" inverted="1" name="Is falling" sid="978465617558916" type="Dino" />
+                <condition id="-7" name="Compare instance variable" sid="499710216580701" type="Dino">
+                    <param id="0" name="Instance variable">vida</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="156553434885014" type="Dino">
+                    <param id="0" name="Control">0</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="242553246368295" type="Dino">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="792644080887079" type="Dino">
+                    <param id="0" name="Animation">&quot;Andando&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="702998992397791">
+            <conditions>
+                <condition id="5" name="Compare axis" sid="993629494107917" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Axis">0</param>
+                    <param id="2" name="Comparison">4</param>
+                    <param id="3" name="Value">0</param>
+                </condition>
+                <condition behavior="Platform" id="3" inverted="1" name="Is jumping" sid="715745156418185" type="Dino" />
+                <condition behavior="Platform" id="4" inverted="1" name="Is falling" sid="984206758160203" type="Dino" />
+                <condition id="-7" name="Compare instance variable" sid="971673536492121" type="Dino">
+                    <param id="0" name="Instance variable">vida</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="584706127147003" type="Dino">
+                    <param id="0" name="Control">1</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="137085443868323" type="Dino">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="992710479967732" type="Dino">
+                    <param id="0" name="Animation">&quot;Andando&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="630401314196687">
+            <conditions>
+                <condition id="3" name="Is button down" sid="435233385332519" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Button">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="587504501663075" type="Dino">
+                    <param id="0" name="Control">2</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <event-block sid="143639254693382">
+            <conditions>
+                <condition id="2" name="Key is down" sid="348311264240057" type="Keyboard">
+                    <param id="0" name="Key">39</param>
+                </condition>
+                <condition behavior="Platform" id="3" inverted="1" name="Is jumping" sid="864364959388968" type="Dino" />
+                <condition behavior="Platform" id="4" inverted="1" name="Is falling" sid="481680367905862" type="Dino" />
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="121513851532905" type="Dino">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="6" name="Set speed" sid="352088355308450" type="Dino">
+                    <param id="0" name="Speed">10</param>
+                </action>
+                <action id="4" name="Set animation" sid="863392783013414" type="Dino">
+                    <param id="0" name="Animation">&quot;Andando&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="601363683735279">
+            <conditions>
+                <condition id="2" name="Key is down" sid="456957821758926" type="Keyboard">
+                    <param id="0" name="Key">37</param>
+                </condition>
+                <condition behavior="Platform" id="3" inverted="1" name="Is jumping" sid="776525296139796" type="Dino" />
+                <condition behavior="Platform" id="4" inverted="1" name="Is falling" sid="276257100363194" type="Dino" />
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="341824329053542" type="Dino">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="6" name="Set speed" sid="326302929268066" type="Dino">
+                    <param id="0" name="Speed">10</param>
+                </action>
+                <action id="4" name="Set animation" sid="299564866037681" type="Dino">
+                    <param id="0" name="Animation">&quot;Andando&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="914651309303247">
+            <conditions>
+                <condition id="2" inverted="1" name="Key is down" sid="694716068919684" type="Keyboard">
+                    <param id="0" name="Key">39</param>
+                </condition>
+                <condition id="2" inverted="1" name="Key is down" sid="720691438953350" type="Keyboard">
+                    <param id="0" name="Key">37</param>
+                </condition>
+                <condition id="2" inverted="1" name="Key is down" sid="212810656237064" type="Keyboard">
+                    <param id="0" name="Key">32</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="6" name="Set speed" sid="340517920010405" type="Dino">
+                    <param id="0" name="Speed">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="966350570959147">
+            <conditions>
+                <condition behavior="Platform" id="3" name="Is jumping" sid="983214514868739" type="Dino" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="263245284844586" type="Dino">
+                    <param id="0" name="Animation">&quot;pulando&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="6" name="Set speed" sid="266724013180676" type="Dino">
+                    <param id="0" name="Speed">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
